@@ -1,4 +1,4 @@
-name: MyFirstPipeLine
+name: HelloWorld
 
 on:
   workflow_dispatch:
