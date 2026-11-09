@@ -1,0 +1,21 @@
+name: MyFirstPipeLine
+
+on:
+  workflow_dispatch:
+
+jobs:
+  hello_job:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Print Hello from GitHub Actions
+        run: echo "Hello from GitHub Actions"
+
+      - name: Print current date
+        run: date
+
+      - name: Print branch name
+        run: echo "Branch name - ${{ github.ref_name }}"
